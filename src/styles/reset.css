@@ -5,3 +5,25 @@
     font-family: Roboto, sans-serif;
     list-style: none;
 }
+    /* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #00a2ff orange;
+    }
+
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 5px;
+    }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #00a2ff;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    }

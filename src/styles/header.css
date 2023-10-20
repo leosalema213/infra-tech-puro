@@ -30,22 +30,22 @@ header {
 }
 
 header p {
-    color: rgb(0, 153, 255);
+    color: #00a2ff;
     font-size: 18px;
 }
 
-header a {
+.container a {
     text-transform: uppercase;
     display: inline-block;
-    color: rgb(1, 185, 241);
-    border:2px solid  rgb(0, 153, 255);
-    padding: 6px 24px;
+    color: #00a2ff;
+    border:1px solid  #00a2ff;
+    padding: 9px 32px;
     margin-top: 80px;
     cursor: pointer;
 }
 
-header a:hover {
-    background-color: rgb(1, 185, 241);
+.container a:hover {
+    background-color: #00a2ff;
     color:#fff;
     transform:translateY(-4px);
     transition: 0.4s;
@@ -62,7 +62,19 @@ header h1 {
 }
 .sidebar {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 40vh;
+    right: 16px;
     z-index: 1;
+}
+.sidebar li {
+    margin-bottom: 16px;
+}
+.sidebar img:hover{
+    transform:translateY(-4px);
+    transition: 0.4s;
+}
+
+.sidebar img {
+    width: 32px;
+    height: 32px;
 }
