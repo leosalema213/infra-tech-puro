@@ -10,11 +10,13 @@ section h2 {
     padding: 20px 0;
     text-align: center;
 }
-.titleAbout {
+.titleDestaqued {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #421EAA;
     margin-bottom: 100px;
     color: #fff;
-    text-align: center;
     padding: 20px 0;
     font-size: 30px;
     margin-bottom: 16px;
@@ -102,4 +104,52 @@ li img {
 .btn--primary:hover {
     transform: scale(1.1);
     transition-duration:0.3s;
+}
+
+#registrationForm {
+    max-width: 400px;
+    margin-bottom: 60px;
+}
+
+#registrationForm form {
+    padding-top: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputGroup {
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.inputGroup input{
+    width: 100%;
+    padding: 6px 8px;
+    border-radius: 12px;
+    font-size: 18px;
+    border: 1px solid #00a2ff;
+    outline: 1px solid transparent;
+}
+input:focus {
+    outline: 1px solid #00a2ff;
+}
+form button{
+    margin-top: 8px;
+    width: 100%;
+    padding: 6px 8px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #00a2ff;
+    border-radius: 12px;
+    font-size: 18px;
 }
