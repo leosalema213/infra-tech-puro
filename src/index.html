@@ -9,15 +9,19 @@
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/sections.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./scripts/scripts.js" defer></script>
     <title>Landing Page</title>
 </head>
 <body>
-    <header>
+    <header id="hero">
         <div class="container">
             <p>formação online</p>
             <h1>Cursos InfraTech</h1>
             <h2>Cursos profissionalizantes para o seu crescimento profissional.</h2>
-            <a type="button">Inscreva-se</a>
+            <a href="#registrationForm">Inscreva-se</a>
         </div>
         <aside class="sidebar">
             <ul>
@@ -44,7 +48,7 @@
         <div class="container">
             <h3 class="margin-16">Sobre Nós</h3>
             <div class="grid__container border--top">
-                <img src="./images/banner.jpg" alt="imagem">
+                <img src="./images/time.png" alt="imagem">
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus natus iusto facere delectus totam voluptate, sed quam et dolores itaque, quo explicabo labore doloribus numquam. Ipsum, vitae asperiores! Sed, iusto?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae porro nobis rerum eaque obcaecati impedit molestias, ut illum odio accusantium voluptas quas? Natus impedit laboriosam, quaerat praesentium delectus quos incidunt.</p>
@@ -56,25 +60,26 @@
                         <li class="teacherItem">
                             <img src="./images/Jaque.png" alt="Prof-teste">
                             <div>
-                                <h3>Jaqueline</h3>
-                                <p>Olá eu sou  a jaqueline tenho 20 anos <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima amet tenetur cum beatae velit laborum illum est voluptatum. Quidem modi accusantium quibusdam nihil molestiae deleniti amet nostrum omnis ad magnam!</p>
+                                <h3>Jaqueline Vitoria</h3>
+                                <h4>UX/UI Design</h4>
+                                <p>Olá eu sou  a jaqueline tenho 20 anos, lorem ipsum dolor sit amet consectetur ipisicing elit. Minima amet tenetur cum beatae velit laborum illum est voluptatum. Quidem modi accusantium quibusdam nihil molestiae deleniti amet nostrum omnis ad magnam!</p>
                             </div>
                         </li>
                         <li class="teacherItem">
                             <img src="./images/leonardo.jpg" alt="Prof-teste">
                             <div>
-                                <h3>Leonardo</h3>
-                                <p>Olá eu sou  o Leonardo tenho 21 anos <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima amet tenetur cum beatae velit laborum illum est voluptatum. Quidem modi accusantium quibusdam nihil molestiae deleniti amet nostrum omnis ad magnam!</p>
+                                <h3>Leonardo Patrick</h3>
+                                <h4>Desenvolvedor Full Stack Java</h4>
+                                <p>Olá eu sou  o Leonardo tenho 21 anos,
+                                    lorem ipsum dolor sit amet consectetur dipisicing elit. Minima amet tenetur cum beatae velit laborum illum est voluptatum. Quidem modi accusantium quibusdam nihil molestiae deleniti amet nostrum omnis ad magnam!</p>
                             </div>
                         </li>
                         <li class="teacherItem">
                             <img src="./images/Mauricio.png" alt="Prof-teste">
                             <div>
-                                <h3>Mauricio</h3>
-                                <p>Olá eu sou  o Mauricio tenho 21 anos <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima amet tenetur cum beatae velit laborum illum est voluptatum. Quidem modi accusantium quibusdam nihil molestiae deleniti amet nostrum omnis ad magnam!</p>
+                                <h3>Mauricio Goldoni</h3>
+                                <h4>Desenvolvedor Full Stack Python</h4>
+                                <p>Olá eu sou  o Mauricio tenho 21 anos, lorem ipsum dolor sit amet consectetur adipisicing elit. Minima amet tenetur cum beatae velit laborum illum est voluptatum. Quidem modi accusantium quibusdam nihil molestiae deleniti amet nostrum omnis ad magnam!</p>
                             </div>
                         </li>
                     </ul>
@@ -119,30 +124,62 @@
                         </div>
                     </div>
                 </li>
+                <li>
+                    <h3 class="margin-16">UX/UI Design</h3>
+                    <div class="curses__content curses__content--left">
+                        <img class="" src="./images/UX-UI-designer.jpg" alt="teste">
+                        <div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, illum fugiat? Necessitatibus, pariatur? Similique quod quis necessitatibus cumque eum asperiores. Nihil, nulla! Commodi optio quo reiciendis eius corporis eos explicabo.</p>
+                            <button type="button" class="btn--primary">Saiba mais</button>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
     <h2 class="titleDestaqued"> 
         <img src="./images/descontoIcon.png" alt="">
-        Desconto por tempo limitado <br>
+        Desconto disponivel por <span id="contador"></span>
     </h2>
     <section id="registrationForm" class="container">
         <h3>Garanta ja sua vaga</h3>
-        <form class="border--top">
+        <form  class="border--top">
             <div class="inputGroup">
-                <label for="Nome">Nome</label>
-                <input type="text">
+                <label for="name">Nome</label>
+                <input id="name" type="text" required>
             </div>
             <div class="inputGroup">
-                <label for="Nome">Email</label>
-                <input type="email">
+                <label for="cel">Celular</label>
+                <input id="cel" type="text" required>
+                <span> O numero de celular digitado esta incorreto </span>
             </div>
             <div class="inputGroup">
-                <label for="Nome">Celular</label>
-                <input type="text">
+                <label for="email">Email</label>
+                <input id="email" type="email" required>
             </div>
-            <button type="submit">Enviar</button>
+            <select name="curso escolhido" id="choiceCourse" required>
+                <option class="initialValue" selected disabled>Selecione seu curso de interesse</option>
+                <option value="Desenvolvedor Front End">Desenvolvedor Front End</option>
+                <option value="Desenvolvedor Back End">Desenvolvedor Back End</option>
+                <option value="Desenvolvedor Full Stack Java ">Desenvolvedor Full Stack Java</option>
+                <option value="UX/UI Design">UX/UI Design</option>
+            </select>
+            <button id="btn-submit" type="submit">Enviar</button>
         </form>
     </section>
+    <footer>
+        <ul class="footerLinks">
+            <li>
+                <a href="#hero">Voltar ao topo</a>
+            </li>
+            <li>
+                <a href="#about">Sobre Nós</a>
+            </li>
+            <li>
+                <a href="#curses">Cursos</a>
+            </li>
+        </ul>
+        &copy; Todos os direitos reservados
+    </footer>
 </body>
 </html>
