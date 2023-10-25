@@ -4,6 +4,21 @@ const btn = document.querySelector('#btn-submit')
 const msgError = document.querySelector('.inputGroup span')
 const counter = document.querySelector('#contador')
 
+const myObserverRight = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('show')
+    } else {[
+      entry.target.classList.remove('show')
+    ]}
+  }) 
+})
+
+const sectionAbout = document.querySelectorAll('.hidden')
+sectionAbout.forEach((e) => myObserverRight.observe(e))
+
+
+
 const inputCelInvalid = () => {
   inputCel.style.border = '2px solid red'
   msgError.classList.add('is-visible')
