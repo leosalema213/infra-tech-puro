@@ -1,60 +1,18 @@
-const form = document.querySelector('form')
-const inputCel = document.querySelector("#cel")
-const btn = document.querySelector('#btn-submit')
-const msgError = document.querySelector('.inputGroup span')
 const counter = document.querySelector('#contador')
+const elementScrollStyle = document.querySelectorAll('.scroll')
+const inputAccordion = document.querySelectorAll('.accordion__header')
+const btnOpenAccordion = document.querySelectorAll('.open__accordion')
+const btnCloseAccordion = document.querySelectorAll('.close__accordion')
+const contentAccordion = document.querySelectorAll('.accordion__text')
 
-const myObserverRight = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if(entry.isIntersecting) {
-      entry.target.classList.add('show')
-    } else {[
-      entry.target.classList.remove('show')
-    ]}
-  }) 
-})
-
-const sectionAbout = document.querySelectorAll('.hidden')
-sectionAbout.forEach((e) => myObserverRight.observe(e))
-
-
-
-const inputCelInvalid = () => {
-  inputCel.style.border = '2px solid red'
-  msgError.classList.add('is-visible')
-  btn.classList.add('disabled')
-  btn.disabled = true
+// Oculta todas as seções com a classe scroll
+const hidden = () => {
+  for(let i = 0; i < elementScrollStyle.length; i++) {
+    elementScrollStyle[i].classList.add('hidden')
+  }
 }
 
-const inputCelValid = () => {
-  inputCel.style.border = '1px solid #00a2ff'
-  msgError.classList.remove('is-visible')
-  btn.classList.remove('disabled')
-  btn.disabled = false
-}
-
-IMask(
-  document.querySelector("#cel"),
-  {
-    mask: '(00) 00000-0000'
-  }
-)
-
-form.addEventListener('submit', (e) => {
-  Swal.fire('Inscrição realizada com sucesso')
-})
-
-
-inputCel.addEventListener('blur', (e) => {
-  value = e.target.value 
-  if (value.length < 15) {
-    inputCelInvalid()
-  } else {
-    inputCelValid()
-  }
-  
-})
-
+// timer da promoção
 function startTimer(duration, display) {
   let timer = duration,hours,minutes, seconds;
 
@@ -75,9 +33,51 @@ function startTimer(duration, display) {
   
 }
 
-window.onload = function() {
-  let duration = 60 * 1440
-  let display = counter
+document.addEventListener('DOMContentLoaded', () => {
+  hidden()
+  
+  //Observa quando as seções estão na tela, para adicionar a classe show
+  const myObserverRight = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('show')
+      } else {[
+        entry.target.classList.remove('show')
+      ]}
+    }) 
+  })
+  
+  const sectionAbout = document.querySelectorAll('.hidden')
+  sectionAbout.forEach((e) => myObserverRight.observe(e))
+  
+  //Aqui é onde setamos o tempo do timer da promoção
+  
+  if( counter ) {
+    let duration = 60 * 1440  // em minutos
+    let display = counter
+  
+    startTimer(duration, display)
+  }
+})
 
-  startTimer(duration, display)
+for(let i = 0; i < inputAccordion.length; i++) {
+  inputAccordion[i].addEventListener('click', () => {
+    if( !contentAccordion[i].classList.contains('is--open') ) {
+      openAccordion(i)
+    } else {
+      closeAccordion(i)
+    }
+  })
+}
+
+const openAccordion = (i) => {
+    contentAccordion[i].classList.add('is--open')
+    btnOpenAccordion[i].style.display = 'none'
+    btnCloseAccordion[i].style.display = 'block'
+}
+
+const closeAccordion = (i) => {
+  contentAccordion[i].classList.remove('is--open')
+  btnOpenAccordion[i].style.display = 'block'
+  btnCloseAccordion[i].style.display = 'none'
 }

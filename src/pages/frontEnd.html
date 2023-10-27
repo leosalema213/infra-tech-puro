@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front - End</title>
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="./styles/frontEnd/header.css" />
+    <link rel="stylesheet" href="./styles/frontEnd/section.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="../scripts/formulario.js" defer></script>
+    <script src="../scripts/scripts.js" defer></script>
+  </head>
+  <body>
+    <header id="hero">
+      <div class="container">
+        <p>Garanta uma carreira de sucesso como</p>
+        <h1>
+          Desenvolvedor <br />
+          Front End
+        </h1>
+        <ul>
+          <li>Para você que não conhece nada de programação</li>
+          <li>Mentores com mais de 10 anos de mercado</li>
+          <li>Garanta seu emprego ou devolvemos o seu dinhero</li>
+        </ul>
+      </div>
+      <img id="animation" src="../images/animation.svg" alt="">
+      <div id="registrationForm" class="container">
+        <h3>Garanta ja sua vaga</h3>
+        <form class="border--top">
+          <div class="inputGroup">
+            <label for="name">Nome</label>
+            <input id="name" type="text" required />
+          </div>
+          <div class="inputGroup">
+            <label for="cel">Celular</label>
+            <input id="cel" type="text" placeholder="(99) 99999-9999" required />
+            <span> O numero de celular digitado esta incorreto </span>
+          </div>
+          <div class="inputGroup">
+            <label for="email">Email</label>
+            <input id="email" type="email" required />
+          </div>
+          <div class="inputGroup">
+            <label for="choiceCourse">Curso de interesse</label>
+            <select name="curso escolhido" id="choiceCourse" required>
+              <option selected value="Desenvolvedor Front End">
+                Desenvolvedor Front End
+              </option>
+            </select>
+          </div>
+          
+          <button id="btn-submit" type="submit">Enviar</button>
+        </form>
+      </div>
+    </header>
+    <section id="infos">
+      <div class="infosContainer">
+        <div>
+          <h3>Metodos de ensino</h3>
+          <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam beatae necessitatibus neque quisquam pariatur? Asperiores debitis blanditiis, vitae quia ut quaerat aliquam iste voluptatibus eaque amet minima rem possimus impedit!</p>
+        </div>
+        <div>
+          <h3>Acesso vitalício</h3>
+          <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam beatae necessitatibus neque quisquam pariatur? Asperiores debitis blanditiis, vitae quia ut quaerat aliquam iste voluptatibus eaque amet minima rem possimus impedit!</p>
+        </div>
+        <div>
+          <h3>Centro de carreiras</h3>
+          <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam beatae necessitatibus neque quisquam pariatur? Asperiores debitis blanditiis, vitae quia ut quaerat aliquam iste voluptatibus eaque amet minima rem possimus impedit!</p>
+        </div>
+        <div>
+          <h3>10 projetos práticos</h3>
+          <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam beatae necessitatibus neque quisquam pariatur? Asperiores debitis blanditiis, vitae quia ut quaerat aliquam iste voluptatibus eaque amet minima rem possimus impedit!</p>
+        </div>
+      </div>
+    </section>
+    <section id="accordion">
+      <h2>Oque você ira aprender</h2>
+            <ul class="accordion__container">
+              <li class="accordion__item">
+                <div class="accordion__header">
+                  <button type="button" class="buttonAccordion">HTML / CSS</button>
+                  <img class="open__accordion" src="../images/icon-seta.png" alt="close">
+                  <img class="close__accordion" src="../images/icons-excluir.png" alt="close">
+                </div>
+                <div class="accordion__text">
+                  <p>HyperText Markup Language (HTML) é a linguagem de marcação padrão usada para criar páginas da web. <br>
+                    É o bloco de construção mais básico necessário para o desenvolvimento de sites.
+                </p>
+                <p>
+                  CSS (Cascading Style Sheets) é a linguagem usada para apresentar o documento que você cria com HTML.
+                </p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__header">
+                  <button type="button" class="buttonAccordion">
+                    JavaScript / jQuery
+                  </button>
+                  <img class="open__accordion" src="../images/icon-seta.png" alt="close">
+                  <img class="close__accordion " src="../images/icons-excluir.png" alt="close">
+                </div>
+                <div class="accordion__text">
+                  <p>JavaScript (JS) é outra ferramenta importante para um desenvolvedor front-end, se você está tentando implementar recursos interativos em seu site, como áudio e vídeo, jogos, habilidades de rolagem, animações de página, JS é a ferramenta que você precisa.
+                  </p>
+                  <p></p>
+                    jQuery é uma coleção de plugins e extensões que tornam mais rápido e fácil usar o JS em seu site, com ele pegamos tarefas comuns que requerem várias linhas de código JS e as compacta em um formato que pode ser executado com uma única linha.
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__header">
+                  <button type="button" class="buttonAccordion">
+                    React Js
+                  </button>
+                  <img class="open__accordion" src="../images/icon-seta.png" alt="close">
+                  <img class="close__accordion" src="../images/icons-excluir.png" alt="close">
+                </div>
+                <div class="accordion__text is-open">
+                  <p> React é um framework JavaScript criado pelo Facebook (atual Meta) que é usado para criar interfaces de usuário (UI) em aplicativos web. <br>
+                    Ele é popular por ser fácil de usar, altamente flexível e escalável, e é usado por muitas empresas de tecnologia, incluindo o Facebook, Instagram e Airbnb.</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__header">
+                  <button type="button" class="buttonAccordion">
+                    Versionamento de código
+                  </button>
+                  <img class="open__accordion" src="../images/icon-seta.png" alt="close">
+                  <img class="close__accordion" src="../images/icons-excluir.png" alt="close">
+                </div>
+                <div class="accordion__text is-open">
+                  <p> O versionamento de código permite que os desenvolvedores criem ramificações (branches) <br>
+                  para trabalhar em funcionalidades ou correções separadamente, sem interferir na versão principal do projeto. <br>
+                  Essas ramificações são mescladas (merged) ao projeto principal quando prontas.</p>
+                </div>
+              </li>
+              <li class="accordion__item">
+                <div class="accordion__header">
+                  <button type="button" class="buttonAccordion">
+                    SASS / LESS
+                  </button>
+                  <img class="open__accordion" src="../images/icon-seta.png" alt="close">
+                  <img class="close__accordion" src="../images/icons-excluir.png" alt="close">
+                </div>
+                <div class="accordion__text is-open">
+                  <p> O SASS é uma linguagem de extensão do CSS, a sigla significa “Syntactically Awesome Style Sheets” traduzindo ao pé da letra, folhas de estilo com uma sintaxe incrível. A sua ideia é adicionar recursos especiais como variáveis, mixins, funções e operações e outras opções variadas.
+                  </p>
+                  <p>
+                    O LESS CSS foi criado para otimizar o código CSS, essa ferramenta nos ajuda a obter mais resultados com menos código através de seus recursos avançados para nos salvar, tecnicamente ele é um pré-compilador CSS, ele não tenta substituir o próprio CSS, mas simplesmente nos oferece melhorias.
+                  </p>
+                </div>
+              </li>
+            </ul>
+    </section>
+    <footer>
+      <ul class="footerLinks">
+          <li>
+              <a href="../index.html">Voltar para a home</a>
+          </li>
+      </ul>
+      &copy; Todos os direitos reservados
+  </footer>
+  </body>
+</html>

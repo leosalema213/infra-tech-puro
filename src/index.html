@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="./scripts/scripts.js" defer></script>
+    <script src="./scripts/formulario.js" defer></script>
     <title>Landing Page</title>
 </head>
 <body>
@@ -44,7 +45,7 @@
         </aside>
     </header>
     <h2 class="titleDestaqued">Conheça mais a InfraTech</h2>
-    <section id="about" class="hidden">
+    <section id="about" class="scroll">
         <div class="container">
             <h3 class="margin-16">Sobre Nós</h3>
             <div class="grid__container border--top">
@@ -57,7 +58,7 @@
             <div class="container">
                 <h3 class="margin-16">Nossos Professores</h3>
                     <ul class="border--top teachersContainer">
-                        <li class="teacherItem hidden">
+                        <li class="teacherItem scroll">
                             <img src="./images/Jaque.png" alt="Prof-teste">
                             <div>
                                 <h3>Jaqueline Vitoria</h3>
@@ -65,7 +66,7 @@
                                 <p>Olá eu sou  a jaqueline tenho 20 anos, lorem ipsum dolor sit amet consectetur ipisicing elit. Minima amet tenetur cum beatae velit laborum illum est voluptatum. Quidem modi accusantium quibusdam nihil molestiae deleniti amet nostrum omnis ad magnam!</p>
                             </div>
                         </li>
-                        <li class="teacherItem hidden">
+                        <li class="teacherItem scroll">
                             <img src="./images/leonardo.jpg" alt="Prof-teste">
                             <div>
                                 <h3>Leonardo Patrick</h3>
@@ -74,7 +75,7 @@
                                     lorem ipsum dolor sit amet consectetur dipisicing elit. Minima amet tenetur cum beatae velit laborum illum est voluptatum. Quidem modi accusantium quibusdam nihil molestiae deleniti amet nostrum omnis ad magnam!</p>
                             </div>
                         </li>
-                        <li class="teacherItem hidden">
+                        <li class="teacherItem scroll">
                             <img src="./images/Mauricio.png" alt="Prof-teste">
                             <div>
                                 <h3>Mauricio Goldoni</h3>
@@ -87,50 +88,50 @@
             </div>
         </div>
     </section>
-    <section id="curses" class="hidden">
+    <section id="curses" class="scroll">
         <div class="container">
             <h2>
                 Nossos Cursos
             </h2>
             <ul id="cursesContainer" class="border--top">
-                <li class="hidden">
-                    <h3 class="margin-16">Desenvolvedor Front End</h3>
+                <li class="scroll">
+                        <h3 class="margin-16">Desenvolvedor Front End</h3>
                     <div class="curses__content">
                         <img src="./images/front end.jpg" alt="teste">
                         <div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, illum fugiat? Necessitatibus, pariatur? Similique quod quis necessitatibus cumque eum asperiores. Nihil, nulla! Commodi optio quo reiciendis eius corporis eos explicabo.</p>
-                            <button type="button" class="btn--primary">Saiba mais</button>
+                            <a href="./pages/frontEnd.html" target="_blank" class="btn--primary">Saiba mais</a>
                         </div>
                     </div>
                 </li>
-                <li  class="hidden">
+                <li  class="scroll">
                     <h3 class="margin-16">Desenvolvedor Back End</h3>
                     <div class="curses__content curses__content--left">
                         <img src="./images/backEnd.jpg " alt="teste">
                         <div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, illum fugiat? Necessitatibus, pariatur? Similique quod quis necessitatibus cumque eum asperiores. Nihil, nulla! Commodi optio quo reiciendis eius corporis eos explicabo.</p>
-                            <button type="button" class="btn--primary">Saiba mais</button>
+                            <a type="button" class="btn--primary">Saiba mais</a>
                         </div>
                     </div>
                 </li>
-                <li class="hidden">
+                <li class="scroll">
                     <h3 class="margin-16">Desenvolvedor Full Stack Java</h3>
                     <div class="curses__content">
                         <img class="" src="./images/fullStack.jpg" alt="teste">
                         <div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, illum fugiat? Necessitatibus, pariatur? Similique quod quis necessitatibus cumque eum asperiores. Nihil, nulla! Commodi optio quo reiciendis eius corporis eos explicabo.</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, illum fugiat? Necessitatibus, pariatur? Similique quod quis necessitatibus cumque eum asperiores.</p>
-                            <button type="button" class="btn--primary">Saiba mais</button>
+                            <a type="button" class="btn--primary">Saiba mais</a>
                         </div>
                     </div>
                 </li>
-                <li class="hidden">
+                <li class="scroll">
                     <h3 class="margin-16">UX/UI Design</h3>
                     <div class="curses__content curses__content--left">
                         <img class="" src="./images/UX-UI-designer.jpg" alt="teste">
                         <div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, illum fugiat? Necessitatibus, pariatur? Similique quod quis necessitatibus cumque eum asperiores. Nihil, nulla! Commodi optio quo reiciendis eius corporis eos explicabo.</p>
-                            <button type="button" class="btn--primary">Saiba mais</button>
+                            <a type="button" class="btn--primary">Saiba mais</a>
                         </div>
                     </div>
                 </li>
@@ -150,20 +151,23 @@
             </div>
             <div class="inputGroup">
                 <label for="cel">Celular</label>
-                <input id="cel" type="text" required>
+                <input id="cel" type="text" placeholder="(99) 99999-9999" required>
                 <span> O numero de celular digitado esta incorreto </span>
             </div>
             <div class="inputGroup">
                 <label for="email">Email</label>
                 <input id="email" type="email" required>
             </div>
+            <div class="inputGroup">
+                <label for="choiceCourse">Curso de interesse</label>
             <select name="curso escolhido" id="choiceCourse" required>
-                <option class="initialValue" selected disabled>Selecione seu curso de interesse</option>
+                <option class="initialValue" selected disabled></option>
                 <option value="Desenvolvedor Front End">Desenvolvedor Front End</option>
                 <option value="Desenvolvedor Back End">Desenvolvedor Back End</option>
                 <option value="Desenvolvedor Full Stack Java ">Desenvolvedor Full Stack Java</option>
                 <option value="UX/UI Design">UX/UI Design</option>
             </select>
+            </div>
             <button id="btn-submit" type="submit">Enviar</button>
         </form>
     </section>
@@ -181,5 +185,6 @@
         </ul>
         &copy; Todos os direitos reservados
     </footer>
+    
 </body>
 </html>

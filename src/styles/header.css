@@ -34,7 +34,7 @@ header p {
     font-size: 18px;
 }
 
-.container a {
+header .container a {
     text-transform: uppercase;
     display: inline-block;
     color: #00a2ff;
@@ -44,7 +44,7 @@ header p {
     cursor: pointer;
 }
 
-.container a:hover {
+header .container a:hover {
     background-color: #00a2ff;
     color:#fff;
     transform:translateY(-4px);
