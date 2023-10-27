@@ -1,5 +1,6 @@
+
 footer {
-    background-color: #421EAA;
+    background-color: #552C65;
     color: #fff;
     padding: 60px;
     text-align: center;
@@ -13,15 +14,8 @@ footer a:hover {
 
 .footer__links {
     display: flex;  
+    flex-direction: column;
     justify-content: center;
-    column-gap: 16px;
+    row-gap: 32px;
     margin-bottom: 32px;
-}
-
-@media screen and (max-width: 480px) {
-    .footer__links {
-        display: flex;
-        flex-direction: column;
-        row-gap: 16px;
-    }
 }

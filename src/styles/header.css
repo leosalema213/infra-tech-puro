@@ -1,4 +1,4 @@
-header::after {
+#hero::after {
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     width: 100%;
@@ -6,6 +6,7 @@ header::after {
     top: 0;
     left: 0;
     content: '';
+    
 }
 
 .container {
@@ -15,7 +16,7 @@ header::after {
     z-index: 2;
 }
 
-header {
+#hero {
     display: flex;
     align-items: center;
     text-align: center;
@@ -29,12 +30,12 @@ header {
     z-index: 1;
 }
 
-header p {
+#hero p {
     color: #00a2ff;
     font-size: 18px;
 }
 
-header .container a {
+#hero .container a {
     text-transform: uppercase;
     display: inline-block;
     color: #00a2ff;
@@ -44,7 +45,7 @@ header .container a {
     cursor: pointer;
 }
 
-header .container a:hover {
+#hero .container a:hover {
     background-color: #00a2ff;
     color:#fff;
     transform:translateY(-4px);
@@ -52,7 +53,7 @@ header .container a:hover {
     
 }
 
-header h1 {
+#hero h1 {
     margin-bottom: 16px;
     font-size: 60px;
     word-spacing: 4px;
@@ -77,4 +78,37 @@ header h1 {
 .sidebar img {
     width: 32px;
     height: 32px;
+}
+
+@media screen and (max-width: 480px) {   
+    #hero {
+        padding: 40px;
+    }
+    #hero h1 {
+        margin-bottom: 16px;
+        font-size: 50px;
+        word-spacing: 4px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 20px ;
+    }
+    #hero h2 {
+        font-size: 22px;
+    }
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+
+    .sidebar ul{
+        display: flex;
+        column-gap: 20px;
+    }
+
+        
 }

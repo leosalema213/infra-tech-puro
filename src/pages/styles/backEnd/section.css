@@ -10,7 +10,7 @@
 
 
 #infos {
-    background-color: #552C65;
+    background-color: #0c3a19;
 }
 
 .infos__container {
@@ -40,7 +40,7 @@
 
 #accordion h2 {
     text-align: center;
-    color: #552C65;
+    color: #0c3a19;;
     font-size: 26px;
     margin-bottom: 32px;
 }
@@ -53,9 +53,9 @@
     position: relative;
 }
 
-.button__accordion{
+.accordion__item button{
     width: 100%;
-    color: #552C65;
+    color: #0c3a19;
     font-weight: bold;
     text-align: start;
     padding: 12px;

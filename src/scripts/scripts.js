@@ -1,5 +1,7 @@
 const counter = document.querySelector('#contador')
+
 const elementScrollStyle = document.querySelectorAll('.scroll')
+
 const inputAccordion = document.querySelectorAll('.accordion__header')
 const btnOpenAccordion = document.querySelectorAll('.open__accordion')
 const btnCloseAccordion = document.querySelectorAll('.close__accordion')
@@ -60,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
+//laço responsavel por manipuilar o accordion
 for(let i = 0; i < inputAccordion.length; i++) {
   inputAccordion[i].addEventListener('click', () => {
     if( !contentAccordion[i].classList.contains('is--open') ) {

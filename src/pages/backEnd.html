@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Infratech -  Front End</title>
+    <title>Infratech -  Back End</title>
     <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="./styles/frontEnd/header.css" />
-    <link rel="stylesheet" href="./styles/frontEnd/section.css" />
-    <link rel="stylesheet" href="./styles/frontEnd/footer.css" />
+    <link rel="stylesheet" href="./styles/backEnd/header.css" />
+    <link rel="stylesheet" href="./styles/backEnd/section.css" />
+    <link rel="stylesheet" href="./styles/backEnd/footer.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="../scripts/formulario.js" defer></script>
@@ -19,7 +19,7 @@
         <p>Garanta uma carreira de sucesso como</p>
         <h1>
           Desenvolvedor <br />
-          Front End
+          Back End
         </h1>
         <ul>
           <li>Para você que não conhece nada de programação</li>
@@ -27,7 +27,7 @@
           <li>Garanta seu emprego ou devolvemos o seu dinhero</li>
         </ul>
       </div>
-      <img class="background__animation" src="../images/animationFrontEnd.svg" alt="">
+      <img class="background__animation" src="../images/animationBackEnd.svg" alt="">
       <div id="registration__form" class="container">
         <h3>Garanta ja sua vaga</h3>
         <form class="border--top">
@@ -45,10 +45,10 @@
             <input id="email" type="email" required />
           </div>
           <div class="input__group">
-            <label for="choice__course">Curso de interesse</label>
+            <label for="choiceCourse">Curso de interesse</label>
             <select name="curso escolhido" id="choice__course" required>
               <option selected value="Desenvolvedor Front End">
-                Desenvolvedor Front End
+                Desenvolvedor Back End
               </option>
             </select>
           </div>
@@ -82,7 +82,7 @@
             <ul class="accordion__container">
               <li class="accordion__item scroll">
                 <div class="accordion__header">
-                  <button type="button" class="button__accordion">HTML / CSS</button>
+                  <button type="button" class="buttonAccordion">HTML / CSS</button>
                   <img class="open__accordion" src="../images/icons/icon-seta.png" alt="close">
                   <img class="close__accordion" src="../images/icons/icons-excluir.png" alt="close">
                 </div>
@@ -97,7 +97,7 @@
               </li>
               <li class="accordion__item scroll">
                 <div class="accordion__header">
-                  <button type="button" class="button__accordion">
+                  <button type="button" class="buttonAccordion">
                     JavaScript / jQuery
                   </button>
                   <img class="open__accordion" src="../images/icons/icon-seta.png" alt="close">
@@ -112,7 +112,7 @@
               </li>
               <li class="accordion__item scroll">
                 <div class="accordion__header">
-                  <button type="button" class="button__accordion">
+                  <button type="button" class="buttonAccordion">
                     React Js
                   </button>
                   <img class="open__accordion" src="../images/icons/icon-seta.png" alt="close">
@@ -125,7 +125,7 @@
               </li>
               <li class="accordion__item scroll">
                 <div class="accordion__header">
-                  <button type="button" class="button__accordion">
+                  <button type="button" class="buttonAccordion">
                     Versionamento de código
                   </button>
                   <img class="open__accordion" src="../images/icons/icon-seta.png" alt="close">
@@ -139,7 +139,7 @@
               </li>
               <li class="accordion__item scroll">
                 <div class="accordion__header">
-                  <button type="button" class="button__accordion">
+                  <button type="button" class="buttonAccordion">
                     SASS / LESS
                   </button>
                   <img class="open__accordion" src="../images/icons/icon-seta.png" alt="close">
@@ -156,8 +156,11 @@
             </ul>
     </section>
     <footer>
-      <ul class="footer__links">
-        <a href="../index.html">Voltar para a home</a>
+      <ul class="footerLinks">
+          <li>
+              <a href="../index.html">Voltar para a home</a>
+          </li>
+      </ul>
       &copy; Todos os direitos reservados
   </footer>
   </body>
