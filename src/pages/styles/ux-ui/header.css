@@ -15,20 +15,6 @@ header::after {
   z-index: 2;
 }
 
-.background__animation {
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-}
-.background__animation img {
-  width: 50%;
-}
-
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -36,7 +22,14 @@ header {
   place-items: center;
   align-items: center;
   padding: 5.6vw;
-  background-image: linear-gradient(to right, #552c65, #8467bd, #ee93cd);
+  background-image: linear-gradient(
+    to top,
+    #3a0436,
+    #f374eb,
+    #f890f1,
+    #f566eb,
+    #3b0437
+  );
   width: 100%;
   height: 100vh;
   position: relative;
@@ -45,7 +38,7 @@ header {
 }
 
 header p {
-  color: #0effff;
+  color: #ff70f5;
   font-size: 24px;
   font-weight: bold;
 }
@@ -66,39 +59,27 @@ header ul li {
   margin-bottom: 16px;
 }
 
-.setaBaixo {
-  display: none;
-  width: 40px;
+.background__animation {
+  display: flex;
+  align-items: end;
+  justify-content: center;
   position: absolute;
-  bottom: 20px;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
 }
-.setaBaixo {
-  animation-duration: 1s;
-  animation-name: slidein;
-  animation-iteration-count: infinite ;
+.background__animation img {
+  width: 50%;
+  height: 70%;
 }
-
-@keyframes slidein {
-  from {
-    transform: translateY(-20px);
-  }
-
-  to {
-    transform: translateY(0px);
-  }
-}
-
-.setaBaixo {
-  display: none;
-}
-
 
 .registration__form {
+  z-index: 1;
   width: 460px;
   padding: 40px;
-  background-color: #552c65;
+  background-color: #3a0436;
   border-radius: 30px;
-  z-index: 1;
 }
 
 .registration__form form {
@@ -131,7 +112,7 @@ header ul li {
   outline: 1px solid transparent;
 }
 input:focus {
-  outline: 2px solid #3b6ea4;
+  outline: 2px solid #ff70f5;
 }
 .input__group span {
   display: none;
@@ -148,21 +129,41 @@ form button {
   border: none;
   color: #fff;
   font-weight: bold;
-  background-color: #3b6ea4;
+  background-color: #d831cd;
   border-radius: 12px;
   font-size: 18px;
   cursor: pointer;
 }
 
 form button:hover {
-  background-color: #0bb5d3;
+  background-color: #df66d7;
 }
 form .disabled,
 .disabled:hover {
   cursor: auto;
   background-color: #ccc;
 }
+.setaBaixo {
+  display: none;
+  width: 40px;
+  position: absolute;
+  bottom: 20px;
+}
+.setaBaixo {
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
 
+@keyframes slidein {
+  from {
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
 
 @media screen and (max-width: 480px) {
 
@@ -170,10 +171,6 @@ form .disabled,
     max-width: 100%;
     width: 100%;
     padding: 5.6vw;
-  }
-
-  .background__animation img{
-    width: 100%;
   }
 
   header {
@@ -184,13 +181,17 @@ form .disabled,
     padding-bottom: 40px;
   }
 
+  .background__animation img {
+    width: 100%;
+  }
+
   header p {
     font-size: 14px;
   }
 
   header h1 {
     margin-bottom: 24px;
-    font-size: 28px;
+    font-size: 30px;
     margin-top: 20px;
   }
 
@@ -212,15 +213,11 @@ form .disabled,
     margin-left: 400px;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 768px)  {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .container {
     max-width: 100%;
     width: 100%;
     padding: 5.6vw;
-  }
-
-  .background__animation img {
-    width: 80%;
   }
 
   header {
@@ -228,7 +225,10 @@ form .disabled,
     align-items: start;
     padding: 0 4vw;
     height: 100vh;
-  } 
+  }
+  .background__animation img {
+    width: 80%;
+  }
 
   header p {
     font-size: 20px;
@@ -255,7 +255,6 @@ form .disabled,
     display: none;
   }
 }
-
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .container {
     max-width: 100%;
@@ -320,6 +319,7 @@ form .disabled,
     display: none;
   }
 }
+
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   .background__animation img {
     width: 70%;

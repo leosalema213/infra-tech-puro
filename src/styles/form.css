@@ -24,7 +24,7 @@
 }
 
 .input__group input,
-#choiceCourse{
+#choice__course{
     width: 100%;
     padding: 6px 8px;
     border-radius: 12px;
@@ -60,7 +60,7 @@ form .disabled {
     background-color: #ccc;
 }
 
-@media screen and (max-width: 480px) { 
+@media screen and (max-width: 599px) { 
     #registration__form {
         max-width: 100%;
         padding: 20px;

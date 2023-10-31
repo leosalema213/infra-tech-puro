@@ -80,7 +80,7 @@
     height: 32px;
 }
 
-@media screen and (max-width: 480px) {   
+@media screen and (max-width: 599px) {   
     #hero {
         padding: 40px;
     }
@@ -111,4 +111,9 @@
     }
 
         
+}
+@media screen and (min-width: 600px) {
+    #hero h2 {
+        font-size: 22px;
+    }
 }

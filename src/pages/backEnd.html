@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="../scripts/formulario.js" defer></script>
+    <script src="../scripts/formularioMobile.js" defer></script>
     <script src="../scripts/scripts.js" defer></script>
   </head>
   <body>
@@ -27,8 +28,10 @@
           <li>Garanta seu emprego ou devolvemos o seu dinhero</li>
         </ul>
       </div>
-      <img class="background__animation" src="../images/animationBackEnd.svg" alt="">
-      <div id="registration__form" class="container">
+      <div class="background__animation">
+        <img src="../images/animationBackEnd.svg" alt="">
+      </div>
+      <div class="registration__form" class="container">
         <h3>Garanta ja sua vaga</h3>
         <form class="border--top">
           <div class="input__group">
@@ -45,17 +48,17 @@
             <input id="email" type="email" required />
           </div>
           <div class="input__group">
-            <label for="choiceCourse">Curso de interesse</label>
+            <label for="choice__course">Curso de interesse</label>
             <select name="curso escolhido" id="choice__course" required>
               <option selected value="Desenvolvedor Front End">
                 Desenvolvedor Back End
               </option>
             </select>
           </div>
-          
-          <button type="submit">Enviar</button>
+          <button id="btn-submit" type="submit">Enviar</button>
         </form>
       </div>
+      <img class="setaBaixo" src="../images/icon-seta.png" alt="teste">
     </header>
     <section id="infos">
       <div class="infos__container">
@@ -82,78 +85,104 @@
             <ul class="accordion__container">
               <li class="accordion__item scroll">
                 <div class="accordion__header">
-                  <button type="button" class="buttonAccordion">HTML / CSS</button>
-                  <img class="open__accordion" src="../images/icons/icon-seta.png" alt="close">
-                  <img class="close__accordion" src="../images/icons/icons-excluir.png" alt="close">
+                  <button type="button" class="buttonAccordion">
+                    APIs e páginas geradas pelo servidor
+                    <img class="open__accordion" src="../images/icons/icon-seta-green.png" alt="close">
+                    <img class="close__accordion" src="../images/icons/icons-excluir.png" alt="close">
+                  </button>
                 </div>
                 <div class="accordion__text">
-                  <p>HyperText Markup Language (HTML) é a linguagem de marcação padrão usada para criar páginas da web. <br>
-                    É o bloco de construção mais básico necessário para o desenvolvimento de sites.
-                </p>
-                <p>
-                  CSS (Cascading Style Sheets) é a linguagem usada para apresentar o documento que você cria com HTML.
-                </p>
-                </div>
-              </li>
-              <li class="accordion__item scroll">
-                <div class="accordion__header">
-                  <button type="button" class="buttonAccordion">
-                    JavaScript / jQuery
-                  </button>
-                  <img class="open__accordion" src="../images/icons/icon-seta.png" alt="close">
-                  <img class="close__accordion " src="../images/icons/icons-excluir.png" alt="close">
-                </div>
-                <div class="accordion__text">
-                  <p>JavaScript (JS) é outra ferramenta importante para um desenvolvedor front-end, se você está tentando implementar recursos interativos em seu site, como áudio e vídeo, jogos, habilidades de rolagem, animações de página, JS é a ferramenta que você precisa.
-                  </p>
-                  <p></p>
-                    jQuery é uma coleção de plugins e extensões que tornam mais rápido e fácil usar o JS em seu site, com ele pegamos tarefas comuns que requerem várias linhas de código JS e as compacta em um formato que pode ser executado com uma única linha.
-                </div>
-              </li>
-              <li class="accordion__item scroll">
-                <div class="accordion__header">
-                  <button type="button" class="buttonAccordion">
-                    React Js
-                  </button>
-                  <img class="open__accordion" src="../images/icons/icon-seta.png" alt="close">
-                  <img class="close__accordion" src="../images/icons/icons-excluir.png" alt="close">
-                </div>
-                <div class="accordion__text is-open">
-                  <p> React é um framework JavaScript criado pelo Facebook (atual Meta) que é usado para criar interfaces de usuário (UI) em aplicativos web. <br>
-                    Ele é popular por ser fácil de usar, altamente flexível e escalável, e é usado por muitas empresas de tecnologia, incluindo o Facebook, Instagram e Airbnb.</p>
-                </div>
-              </li>
-              <li class="accordion__item scroll">
-                <div class="accordion__header">
-                  <button type="button" class="buttonAccordion">
-                    Versionamento de código
-                  </button>
-                  <img class="open__accordion" src="../images/icons/icon-seta.png" alt="close">
-                  <img class="close__accordion" src="../images/icons/icons-excluir.png" alt="close">
-                </div>
-                <div class="accordion__text is-open">
-                  <p> O versionamento de código permite que os desenvolvedores criem ramificações (branches) <br>
-                  para trabalhar em funcionalidades ou correções separadamente, sem interferir na versão principal do projeto. <br>
-                  Essas ramificações são mescladas (merged) ao projeto principal quando prontas.</p>
-                </div>
-              </li>
-              <li class="accordion__item scroll">
-                <div class="accordion__header">
-                  <button type="button" class="buttonAccordion">
-                    SASS / LESS
-                  </button>
-                  <img class="open__accordion" src="../images/icons/icon-seta.png" alt="close">
-                  <img class="close__accordion" src="../images/icons/icons-excluir.png" alt="close">
-                </div>
-                <div class="accordion__text is-open">
-                  <p> O SASS é uma linguagem de extensão do CSS, a sigla significa “Syntactically Awesome Style Sheets” traduzindo ao pé da letra, folhas de estilo com uma sintaxe incrível. A sua ideia é adicionar recursos especiais como variáveis, mixins, funções e operações e outras opções variadas.
-                  </p>
                   <p>
-                    O LESS CSS foi criado para otimizar o código CSS, essa ferramenta nos ajuda a obter mais resultados com menos código através de seus recursos avançados para nos salvar, tecnicamente ele é um pré-compilador CSS, ele não tenta substituir o próprio CSS, mas simplesmente nos oferece melhorias.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium fuga molestiae consequuntur atque. Nisi debitis modi mollitia nostrum tempore illo consectetur architecto ducimus numquam? Animi iste aliquam temporibus sapiente asperiores.
+                  </p>
+                </div>
+              </li>
+              <li class="accordion__item scroll">
+                <div class="accordion__header">
+                  <button type="button" class="buttonAccordion">
+                    Conceitos básicos e lógica de programação
+                    <img class="open__accordion" src="../images/icons/icon-seta-green.png" alt="close">
+                    <img class="close__accordion " src="../images/icons/icons-excluir.png" alt="close">
+                  </button>
+                </div>
+                <div class="accordion__text">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium fuga molestiae consequuntur atque. Nisi debitis modi mollitia nostrum tempore illo consectetur architecto ducimus numquam? Animi iste aliquam temporibus sapiente asperiores.
+                  </p>
+                </div>
+              </li>
+              <li class="accordion__item scroll">
+                <div class="accordion__header">
+                  <button type="button" class="buttonAccordion">
+                    Interfaces, heranças, composição e agregação
+                    <img class="open__accordion" src="../images/icons/icon-seta-green.png" alt="close">
+                    <img class="close__accordion" src="../images/icons/icons-excluir.png" alt="close">
+                  </button>
+                </div>
+                <div class="accordion__text is-open">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium fuga molestiae consequuntur atque. Nisi debitis modi mollitia nostrum tempore illo consectetur architecto ducimus numquam? Animi iste aliquam temporibus sapiente asperiores.
+                  </p>
+                </div>
+              </li>
+              <li class="accordion__item scroll">
+                <div class="accordion__header">
+                  <button type="button" class="buttonAccordion">
+                    SQL
+                    <img class="open__accordion" src="../images/icons/icon-seta-green.png" alt="close">
+                    <img class="close__accordion" src="../images/icons/icons-excluir.png" alt="close">
+                  </button>
+                </div>
+                <div class="accordion__text is-open">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium fuga molestiae consequuntur atque. Nisi debitis modi mollitia nostrum tempore illo consectetur architecto ducimus numquam? Animi iste aliquam temporibus sapiente asperiores.
+                  </p>
+                </div>
+              </li>
+              <li class="accordion__item scroll">
+                <div class="accordion__header">
+                  <button type="button" class="buttonAccordion">
+                    ORMs e JPA
+                  </button>
+                  <img class="open__accordion" src="../images/icons/icon-seta-green.png" alt="close">
+                  <img class="close__accordion" src="../images/icons/icons-excluir.png" alt="close">
+                </div>
+                <div class="accordion__text is-open">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium fuga molestiae consequuntur atque. Nisi debitis modi mollitia nostrum tempore illo consectetur architecto ducimus numquam? Animi iste aliquam temporibus sapiente asperiores.
                   </p>
                 </div>
               </li>
             </ul>
+    </section>
+    <section id="formMobile">
+      <div class="registration__form" class="container">
+        <h2>Inscreva-se agora</h2>
+        <h4>Venha fazer parte do nosso time !</h4>
+        <form  class="border--top">
+          <div class="input__group">
+            <label for="name">Nome</label>
+            <input id="name" type="text" required />
+          </div>
+          <div class="input__group">
+            <label for="cel">Celular</label>
+            <input id="cel" type="text" placeholder="(99) 99999-9999" required />
+            <span> O numero de celular digitado esta incorreto </span>
+          </div>
+          <div class="input__group">
+            <label for="email">Email</label>
+            <input id="email" type="email" required />
+          </div>
+          <div class="input__group">
+            <label for="choice__course">Curso de interesse</label>
+            <select name="curso escolhido" id="choice__course" required>
+              <option selected value="Desenvolvedor Front End">
+                Desenvolvedor Back End
+              </option>
+            </select>
+          </div>
+          <button id="btn-submit" type="submit">Enviar</button>
+        </form>
     </section>
     <footer>
       <ul class="footerLinks">

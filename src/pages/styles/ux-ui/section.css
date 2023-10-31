@@ -9,7 +9,7 @@
 }
 
 #infos {
-  background-color: #0c3a19;
+  background-color: #3a0436;
 }
 
 .infos__container {
@@ -39,7 +39,7 @@
 
 #accordion h2 {
   text-align: center;
-  color: #0c3a19;
+  color: #3a0436;
   font-size: 26px;
   margin-bottom: 32px;
 }
@@ -55,7 +55,7 @@
 
 .accordion__item button {
   width: 100%;
-  color: #0c3a19;
+  color: #3a0436;
   font-weight: bold;
   text-align: start;
   padding: 12px;
@@ -63,9 +63,7 @@
 }
 
 .accordion__item img {
-  position: absolute;
   width: 24px;
-  right: 12px;
   cursor: pointer;
 }
 
@@ -90,7 +88,7 @@
   align-items: center;
   width: 100%;
   padding: 80px 5.6vw;
-  border-top: 2px solid #0c3a19;
+  border-top: 2px solid #3a0436 ;
   margin-bottom: 120px;
 }
 #formMobile h2 {
@@ -147,13 +145,14 @@
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.301);
   }
 
-  .button__accordion {
-    font-size: 18px;
+  .accordion__item button {
+    font-size: 14px;
   }
 
   #formMobile {
     display: block;
   }
+
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {

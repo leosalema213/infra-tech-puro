@@ -1,7 +1,7 @@
 const form = document.querySelector('form')
 const inputCel = document.querySelector("#cel")
 const btn = document.querySelector('#btn-submit')
-const msgError = document.querySelector('.inputGroup span')
+const msgError = document.querySelector('.input__group span')
 
 const inputCelInvalid = () => {
     inputCel.style.border = '2px solid red'
@@ -18,7 +18,7 @@ const inputCelInvalid = () => {
   }
   
   IMask(
-    document.querySelector("#cel"),
+    inputCel,
     {
       mask: '(00) 00000-0000'
     }
