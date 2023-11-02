@@ -60,9 +60,16 @@ form .disabled {
     background-color: #ccc;
 }
 
-@media screen and (max-width: 599px) { 
+@media screen and (max-width: 480px)  { 
     #registration__form {
         max-width: 100%;
         padding: 20px;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #registration__form {
+        max-width: 600px;
+        width: 100%;
+        padding: 80px;
     }
 }
